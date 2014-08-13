@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06C11AD9199BDB1F0016AEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AD8199BDB1F0016AEF2 /* AppDelegate.swift */; };
-		06C11ADB199BDB1F0016AEF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11ADA199BDB1F0016AEF2 /* ViewController.swift */; };
 		06C11ADE199BDB1F0016AEF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06C11ADC199BDB1F0016AEF2 /* Main.storyboard */; };
 		06C11AE0199BDB1F0016AEF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06C11ADF199BDB1F0016AEF2 /* Images.xcassets */; };
 		06C11AEC199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AEB199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift */; };
+		06C11AF6199BDC6E0016AEF2 /* TopNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */; };
+		06C11AF8199BDD2E0016AEF2 /* CommunicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +29,13 @@
 		06C11AD3199BDB1F0016AEF2 /* NewsAggregatorSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAggregatorSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C11AD7199BDB1F0016AEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C11AD8199BDB1F0016AEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06C11ADA199BDB1F0016AEF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06C11ADD199BDB1F0016AEF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06C11ADF199BDB1F0016AEF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06C11AE5199BDB1F0016AEF2 /* NewsAggregatorSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAggregatorSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06C11AEA199BDB1F0016AEF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C11AEB199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAggregatorSwiftTests.swift; sourceTree = "<group>"; };
+		06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNewsTableViewController.swift; sourceTree = "<group>"; };
+		06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				06C11AD8199BDB1F0016AEF2 /* AppDelegate.swift */,
-				06C11ADA199BDB1F0016AEF2 /* ViewController.swift */,
 				06C11ADC199BDB1F0016AEF2 /* Main.storyboard */,
 				06C11ADF199BDB1F0016AEF2 /* Images.xcassets */,
 				06C11AD6199BDB1F0016AEF2 /* Supporting Files */,
+				06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */,
+				06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */,
 			);
 			path = NewsAggregatorSwift;
 			sourceTree = "<group>";
@@ -208,7 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06C11ADB199BDB1F0016AEF2 /* ViewController.swift in Sources */,
+				06C11AF6199BDC6E0016AEF2 /* TopNewsTableViewController.swift in Sources */,
+				06C11AF8199BDD2E0016AEF2 /* CommunicationHandler.swift in Sources */,
 				06C11AD9199BDB1F0016AEF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
