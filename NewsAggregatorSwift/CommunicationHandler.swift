@@ -9,6 +9,7 @@
 import Foundation
 
 let receviedTopNewsDictionary = "Received Top News Dictionary"
+let receivedCategoriesDictionary = "Received Categories Dictionary"
 class CommunicationHandler {
     
     class func getDataFromURL(urlString:String) {
@@ -19,9 +20,23 @@ class CommunicationHandler {
         
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: operationQueue) { (let response, let data, let error) -> Void in
             
-            let dataDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
+            if data != nil {
+                
+                if urlString == topNewsURLAsString {
+                    let dataDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSDictionary
+                    NSNotificationCenter.defaultCenter().postNotificationName(receviedTopNewsDictionary, object: nil, userInfo: dataDictionary);
+                    
+                }
+                    
+                else if urlString == categoriesURLAsString {
+                    let categoriesArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
+                    NSNotificationCenter.defaultCenter().postNotificationName(receivedCategoriesDictionary, object: nil, userInfo: ["categories":categoriesArray])
+                }
+            }
             
-            NSNotificationCenter.defaultCenter().postNotificationName(receviedTopNewsDictionary, object: nil, userInfo: dataDictionary);
+            else {
+                println(error.localizedDescription)
+            }
         }
         
     }

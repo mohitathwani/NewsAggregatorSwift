@@ -1,18 +1,18 @@
 //
-//  TopNewsTableViewController.swift
+//  CategoriesTableViewController.swift
 //  NewsAggregatorSwift
 //
-//  Created by Labs on 8/13/14.
+//  Created by Mohit Athwani on 14/08/14.
 //  Copyright (c) 2014 Tera Mo Labs. All rights reserved.
 //
 
 import UIKit
 
-let topNewsURLAsString = "http://api.feedzilla.com/v1/categories/26/articles.json"
+let categoriesURLAsString = "http://api.feedzilla.com/v1/categories.json"
 
-class TopNewsTableViewController: UITableViewController {
+class CategoriesTableViewController: UITableViewController {
     
-    var articlesArray = NSArray()
+    var categoriesArray = NSArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +23,14 @@ class TopNewsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        title = "Top News"
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedTopNewsWithNotification:", name: receviedTopNewsDictionary, object: nil)
-        CommunicationHandler.getDataFromURL(topNewsURLAsString)
+        title = "Categories"
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedCategoriesWithNotification:", name: receivedCategoriesDictionary, object: nil)
+        CommunicationHandler.getDataFromURL(categoriesURLAsString)
     }
     
-    func receivedTopNewsWithNotification(notification:NSNotification) {
+    func receivedCategoriesWithNotification(notification:NSNotification) {
         
-        articlesArray = notification.userInfo["articles"] as NSArray
+        categoriesArray = notification.userInfo["categories"] as NSArray
         
         dispatch_async(dispatch_get_main_queue(), {
             self.tableView.reloadData()
@@ -53,16 +53,15 @@ class TopNewsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return articlesArray.count
+        return categoriesArray.count
     }
 
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("categoryCell", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
-        
-        cell.textLabel.text = articlesArray[indexPath.row]["title"] as String
+        cell.textLabel.text = categoriesArray[indexPath.row]["english_category_name"] as String
 
         return cell
     }

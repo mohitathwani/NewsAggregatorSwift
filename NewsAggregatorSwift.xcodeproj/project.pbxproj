@@ -13,6 +13,7 @@
 		06C11AEC199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AEB199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift */; };
 		06C11AF6199BDC6E0016AEF2 /* TopNewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */; };
 		06C11AF8199BDD2E0016AEF2 /* CommunicationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */; };
+		E48317EF199CCC5600FFCBAE /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48317EE199CCC5600FFCBAE /* CategoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		06C11AEB199BDB200016AEF2 /* NewsAggregatorSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAggregatorSwiftTests.swift; sourceTree = "<group>"; };
 		06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopNewsTableViewController.swift; sourceTree = "<group>"; };
 		06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicationHandler.swift; sourceTree = "<group>"; };
+		E48317EE199CCC5600FFCBAE /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				06C11AD6199BDB1F0016AEF2 /* Supporting Files */,
 				06C11AF5199BDC6E0016AEF2 /* TopNewsTableViewController.swift */,
 				06C11AF7199BDD2E0016AEF2 /* CommunicationHandler.swift */,
+				E48317EE199CCC5600FFCBAE /* CategoriesTableViewController.swift */,
 			);
 			path = NewsAggregatorSwift;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				06C11AF6199BDC6E0016AEF2 /* TopNewsTableViewController.swift in Sources */,
 				06C11AF8199BDD2E0016AEF2 /* CommunicationHandler.swift in Sources */,
 				06C11AD9199BDB1F0016AEF2 /* AppDelegate.swift in Sources */,
+				E48317EF199CCC5600FFCBAE /* CategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 				06C11AF1199BDB200016AEF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		06C11AF2199BDB200016AEF2 /* Build configuration list for PBXNativeTarget "NewsAggregatorSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +412,7 @@
 				06C11AF4199BDB200016AEF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
