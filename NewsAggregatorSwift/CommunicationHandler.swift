@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let receviedTopNewsDictionary = "Received Top News Dictionary"
 let receivedCategoriesDictionary = "Received Categories Dictionary"
@@ -14,12 +15,16 @@ class CommunicationHandler {
     
     class func getDataFromURL(urlString:String) {
         
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
         let urlRequest = NSURLRequest(URL: NSURL.URLWithString(urlString))
         
         let operationQueue = NSOperationQueue()
         
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: operationQueue) { (let response, let data, let error) -> Void in
             
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
             if data != nil {
                 
                 if urlString == topNewsURLAsString {
