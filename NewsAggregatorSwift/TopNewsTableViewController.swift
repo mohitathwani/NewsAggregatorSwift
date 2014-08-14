@@ -24,6 +24,7 @@ class TopNewsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         title = "Top News"
+        tableView.allowsSelection = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedTopNewsWithNotification:", name: receviedTopNewsDictionary, object: nil)
         CommunicationHandler.getDataFromURL(topNewsURLAsString)
     }
@@ -33,6 +34,7 @@ class TopNewsTableViewController: UITableViewController {
         articlesArray = notification.userInfo["articles"] as NSArray
         
         dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.allowsSelection = true
             self.tableView.reloadData()
         })
     }

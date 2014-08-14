@@ -13,7 +13,7 @@ let categoriesURLAsString = "http://api.feedzilla.com/v1/categories.json"
 class CategoriesTableViewController: UITableViewController {
     
     var categoriesArray = NSArray()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +24,7 @@ class CategoriesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         title = "Categories"
+        tableView.allowsSelection = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedCategoriesWithNotification:", name: receivedCategoriesDictionary, object: nil)
         CommunicationHandler.getDataFromURL(categoriesURLAsString)
     }
@@ -33,6 +34,7 @@ class CategoriesTableViewController: UITableViewController {
         categoriesArray = notification.userInfo["categories"] as NSArray
         
         dispatch_async(dispatch_get_main_queue(), {
+            self.tableView.allowsSelection = true
             self.tableView.reloadData()
         })
     }
